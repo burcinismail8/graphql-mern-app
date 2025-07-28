@@ -2,6 +2,7 @@ import { Query } from "mongoose";
 import Clients from "./components/Clients";
 import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import AddClientModel from "./components/AddClientModel";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -32,6 +33,7 @@ function App() {
       <ApolloProvider client={client}>
         <Header />
         <div className="container">
+          <AddClientModel />
           <Clients />
         </div>
       </ApolloProvider>
